@@ -2,7 +2,10 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import layout from './layout.vue'
 import editor from './editor/index.vue'
 import menuList  from './editor/menuConfig.js'
-import userCenter from './editor/comp/userCenter.vue'
+//import userCenter from './editor/comp/userCenter.vue'
+function lazyLoad(filePath) {
+  return new Function(`return import('${filePath}')`)()
+}
 const routes = [
   {
     path: '',
@@ -19,7 +22,8 @@ const routes = [
   },
   {
     path: '/user-center',
-    component: userCenter
+    //component: userCenter//未必需要这个路由
+    component: ()=>lazyLoad('./editor/comp/userCenter.vue')
   },
    ...genRoutes(menuList.value)//三个点... 是把数组展开成一个个的对象
 ]

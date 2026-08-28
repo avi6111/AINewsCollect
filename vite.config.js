@@ -24,7 +24,7 @@ export default defineConfig({
   server: {
     port: 5173,
     //open: true
-    open: '/flowlayout-main.html'  // 指定入口
+    open: '/#/newsQQCar'  // 指定入口
   },
   build: {
     outDir: 'dist',
