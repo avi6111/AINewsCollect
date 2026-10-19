@@ -61,10 +61,10 @@ const handleMouseLeave = () => {
 
 // 菜单点击
 const handleClick = (item) => {
+  console.log("点击菜单项", item)
   // 有子菜单不触发选中，仅下拉
   if (!item.children) {
     activeId.value = item.id;
-    console.log("点击菜单", item);
     // 可emit事件给父组件，或者 router.push(item.path)
 
     if('path' in item){

@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
-import { fileURLToPath } from 'url'
+//import { fileURLToPath } from 'url'
+import { crx } from '@crxjs/vite-plugin'
+import manifest from './manifest.json'
+// 引入tailwind v4 vite插件
+import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
-  plugins: [vue()],
+  base: './',  // 关键！确保资源引用是相对路径
+  plugins: [vue(),crx({ manifest }),tailwindcss() // 注册tailwind
+  ],
   // resolve: {
   //   alias: {
   //     // 把 three/addons 映射到实际的 npm 包路径
@@ -24,7 +30,19 @@ export default defineConfig({
   server: {
     port: 5173,
     //open: true
-    open: '/#/newsQQCar'  // 指定入口
+    open: '/#/newsQQCar',  // 指定入口
+    proxy: {
+      '/tropy-api': {
+        target: 'http://127.0.0.1:2019',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/tropy-api/, '')
+      },
+      '/newapi': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true,
+          // 不需要 rewrite，因为后端路由本身也是 /newapi/...
+      }
+    }
   },
   build: {
     outDir: 'dist',

@@ -25,7 +25,7 @@ const routes = [
     //component: userCenter//未必需要这个路由
     component: ()=>lazyLoad('./editor/comp/userCenter.vue')
   },
-   ...genRoutes(menuList.value)//三个点... 是把数组展开成一个个的对象
+  ...genRoutes(menuList.value)//三个点... 是把数组展开成一个个的对象
 ]
 // 参考写法：// router/index.js
 // const routes = [

@@ -1,0 +1,18 @@
+【!!一些??】
+projectMain.vue		-项目进度管理器 card片，好像缓存有些问题（未完成）
+proChromePlugin		-浏览器，收藏和标签管理
+projectProgress		-空，《进度》，文字2个
+
+【餐厅45度，经营管理】
+proCardTempMain.vue		        -主要：：45度主小地图
+proCardParent.vue           -主要：：右边栏
+proCardParent第零号.vue      -右边栏
+helCardShopPublicList.vue   -[旧]按钮
+helCardShopMenuTool         -两个菜单按钮，一开始想是头部的File Menu；但实际上右边两个按钮+彩带
+
+proCardTempSlidePanel.vue	-（测试）45度小地图 的右边侧边栏
+proCardShopProgress.vue	    -（测试，不成功）没有45度，只有并列的几个信息，尤如时间线+几个Tips
+
+
+
+

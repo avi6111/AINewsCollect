@@ -10,6 +10,8 @@
   "dependencies": {
     "@comfyorg/fbx-exporter-three": "^1.0.1",
     "element-plus": "^2.7.0",
+    "papaparse": "^5.7.0",
+    "pinia": "^4.0.3",
     "three": "0.183.1",
     "three-edit-cores": "^0.0.19",
     "three-tile": "^0.11.14",
@@ -17,7 +19,13 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.33",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-vue": "^5.0.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.30",
+    "tailwindcss": "^4.3.3",
     "vite": "^5.0.0"
   }
 }

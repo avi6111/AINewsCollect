@@ -1,0 +1,30 @@
+[]
+1.还是用了：fastapi，不知道有什么暗病
+pip install fastapi uvicorn python-multipart aiofiles
+2.(uvicorn_ 需要颜色支持,CMD默认不支持ASNI;如：[32mINFO[0m:     Stopping reloader process [[36m[1m23572[0m]）
+pip install colorama
+
+
+
+
+[tailWind - CSS] ===%#￥%@#%*……&#￥%@#￥！@#%……&……&……&%￥&！！
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+在修改 tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+在 `src/style.css` 全局样式顶部写入：
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

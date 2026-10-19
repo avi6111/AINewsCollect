@@ -23,10 +23,17 @@ const menuList = ref([
         //component:()=>import(/* @vite-ignore */'/src/editor/page/projectProgress.vue') 
         component:()=>lazyLoad('/src/editor/page/projectProgress.vue')
       },
-      { id: 22, label: "角色管理" },
+      { id: 22, label: "测试Chrome 插件",page:"/proChromePlugin",
+        component:()=>import ("/src/editor/page/proChromePlugin.vue")
+       },
       { id: 23, label: "菜单管理" },
+      { id: 24, label: "项目Shop 管理", page: "/ProjCardShopManagement",
+         component:()=>lazyLoad('/src/editor/page/proCardShopProgress.vue') },
+      { id: 25, label: "项目测试45° 管理", page: "/ProjCardTemp",
+         component:()=>lazyLoad('/src/editor/page/proCardTempMain.vue') }
     ],
   },
+  
   {id:5,label:"算法演练",icon:"🤖",
     children:[
       
@@ -43,6 +50,10 @@ const menuList = ref([
     children:[
       {id:61,label:"四川场景数据",page:"/newsSicuan",component:()=>import("/src/editor/spec_gis/CoordsMap.vue")},
       {id:62,label:"QQ飞车广告",page:"/newsQQCar",component:()=>import("/src/editor/spec_gis/ClassicQQAdv.vue")},
+      {id:63,label:"UV 改造",page:"",component:()=>import("/src/editor/spec_gis/ClassicQQAdv.vue")},
+      {id:64,label:"Anim 改造",page:"/module_anim",component:()=>import("/src/editor/store/editorLayout.vue")},
+      {id:65,label:"Threejs 动画系统",page:"/module_three",component:()=>import("/src/editor/store/flowanim.vue")},
+
     ]
   },
   {
@@ -61,6 +72,10 @@ const menuList = ref([
        },
       { id: 32, label: "模型导出",
         func:"fnExportGlb"
+       },
+      { id: 33, label: "统计文件夹大小",
+        path: "/folder-data-center",
+        component:()=>lazyLoad('/src/editor/comp/folderAnalyzeGBar_v2.vue'),
        },
     ],
     path: "/data-center", //这里写也是不行，要写在 children:[] 里
